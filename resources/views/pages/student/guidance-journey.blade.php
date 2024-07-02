@@ -60,15 +60,15 @@
                                     {{ $student['is_finish'] ? __('Finish') : __('Not Finished Yet') }}
                                 </strong>
                             </div>
-                            {{-- @if ($student['is_finish']) --}}
-                            <div class="flex items-center gap-3">
-                                <div wire:loading>
-                                    <x-loading />
+                            @if ($student['is_finish'])
+                                <div class="flex items-center gap-3">
+                                    <div wire:loading>
+                                        <x-loading />
+                                    </div>
+                                    <x-button wire:click='print' size="sm" color="primary" :loading="$isLoading"
+                                        icon="i-ph-download">{{ __('Download the Guidance Completion Mark') }}</x-button>
                                 </div>
-                                <x-button wire:click='print' size="sm" color="primary" :loading="$isLoading"
-                                    icon="i-ph-download">{{ __('Download the Guidance Completion Mark') }}</x-button>
-                            </div>
-                            {{-- @endif --}}
+                            @endif
                         </div>
                     </x-table.td>
                 </x-table.tr>

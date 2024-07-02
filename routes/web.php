@@ -67,9 +67,6 @@ Route::middleware('auth')
             });
 
 
-        Route::get('/report', \App\Livewire\Report::class)
-            ->name('report');
-
         Route::get('/users', \App\Livewire\Users\Index::class)
             ->name('users');
 

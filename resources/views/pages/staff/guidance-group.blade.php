@@ -6,7 +6,7 @@
     </x-alert>
     <div class="flex justify-end">
         <x-button color="primary" icon="i-ph-plus-bold" x-on:click="$dispatch('toggle-create-modal');" wire:click="create">
-            {{ __('Create :create', ['create' => __('Guidance Group')]) }}
+            {{ __('Add :add', ['add' => __('Guidance Group')]) }}
         </x-button>
     </div>
 

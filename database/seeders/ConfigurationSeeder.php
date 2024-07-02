@@ -29,13 +29,13 @@ class ConfigurationSeeder extends Seeder
             ],
             [
                 'attribute' => 'even_semester',
-                'value' => '01-02',
+                'value' => '01-08',
                 'type' => 'string',
                 'description' => 'Semester Ganjil'
             ],
             [
                 'attribute' => 'odd_semester',
-                'value' => '01-08',
+                'value' => '01-02',
                 'type' => 'string',
                 'description' => 'Semester Genap'
             ],

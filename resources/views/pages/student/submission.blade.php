@@ -9,7 +9,7 @@
         <div class="flex justify-end">
             <x-button color="primary" icon="i-ph-plus-bold" x-on:click="$dispatch('toggle-create-modal');"
                 wire:click="create">
-                {{ __('Create :create', ['create' => __('Submission')]) }}
+                {{ __('Add :add', ['add' => __('Submission')]) }}
             </x-button>
         </div>
     @else

@@ -174,12 +174,6 @@ class Sidebar extends Component
                     'isActive' => request()->routeIs('users')
                 ],
                 [
-                    'title' => __('Report'),
-                    'icon' => 'i-ph-newspaper',
-                    'to' => route('report'),
-                    'isActive' => request()->routeIs('report')
-                ],
-                [
                     'title' => __('Configuration'),
                     'icon' => 'i-ph-wrench',
                     'to' => route('configuration'),

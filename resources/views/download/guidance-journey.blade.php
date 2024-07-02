@@ -268,32 +268,40 @@
         {{ __('Guidance Completion Mark') }}
     </h1>
 
-    <table>
-        <tr>
-            <td class="font-bold w-44">NPM</td>
-            <td>{{ $student['data']['npm'] }}</td>
-        </tr>
-        <tr>
-            <td class="font-bold">{{ __('Fullname') }}</td>
-            <td>{{ $student['data']['name'] }}</td>
-        </tr>
-        <tr>
-            <td class="font-bold">{{ __('Semester') }}</td>
-            <td>{{ $student['data']['semester'] }}</td>
-        </tr>
-        <tr>
-            <td class="font-bold">{{ __('Stamp') }}</td>
-            <td>{{ $student['data']['stamp'] }}</td>
-        </tr>
-        <tr>
-            <td class="font-bold">{{ __('Department') }}</td>
-            <td>Ilmu Komputer</td>
-        </tr>
-        <tr>
-            <td class="font-bold">{{ __('Faculty') }}</td>
-            <td>Fakultas Teknik</td>
-        </tr>
-    </table>
+    <div class="mb-9">
+        <div style="clear:both;">
+            <div style="width:20%; float:left">
+                {{ __('Name') }}
+            </div>
+            <div style="width:40%; float:left">: {{ $student['data']['name'] }}</div>
+            <div style="width:20%; float:left;">
+                {{ __('Department') }}
+            </div>
+            <div style="width:20%; float:left">: Ilmu Komputer</div>
+        </div>
+        <div style="clear:both;">
+            <div style="width:20%; float:left;; float:left">
+                {{ __('NIDN') }}
+            </div>
+            <div style="width:40%; float:left">: {{ $student['data']['npm'] }}</div>
+            <div style="width:20%; float:left;">
+                {{ __('Education Program') }}
+            </div>
+            <div style="width:20%; float:left">: Strata-I</div>
+        </div>
+        <div style="clear:both;">
+            <div style="width:20%; float:left">
+                {{ __('Semester') }}
+            </div>
+            <div style="width:30%; float:left">: {{ $student['data']['semester'] }}</div>
+        </div>
+        <div style="clear:both;">
+            <div style="width:20%; float:left">
+                {{ __('Stamp') }}
+            </div>
+            <div style="width:30%; float:left">: {{ $student['data']['stamp'] }}</div>
+        </div>
+    </div>
 
     <table class="bordered">
         <thead>

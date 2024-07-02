@@ -130,6 +130,7 @@ class Action extends Component
 
             $this->dispatch('refreshApproval');
             $this->dispatch('toggle-action-submission-modal');
+            $this->alert('success', __('Successfully'), ['text' => __(':attribute updated successfully.', ['attribute' => __('Submission')])]);
 
             DB::commit();
             $this->isLoading = false;
