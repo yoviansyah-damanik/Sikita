@@ -27,12 +27,12 @@ class Show extends Component
         $studentId = $studentId ? $studentId : auth()->user()->data->id;
 
         $guidance = Guidance::firstOrCreate([
-            'guidance_type_id' => $guidanceTypeId
-        ], [
+            'guidance_type_id' => $guidanceTypeId,
             'student_id' => $studentId
-        ]);
+        ], []);
 
         $this->guidance = $guidance;
+        // ddd($guidance, $guidance->submissions, $guidanceTypeId);
         $this->isShow = true;
     }
 

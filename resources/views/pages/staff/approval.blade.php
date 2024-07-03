@@ -20,7 +20,7 @@
                         <x-table.td centered>
                             {{ $student['data']['semester'] }}
                         </x-table.td>
-                        <x-table.td>
+                        <x-table.td centered>
                             <x-tooltip :title="__('View :view', ['view' => __('Student')])" position="left">
                                 <x-button color="cyan" icon="i-ph-plus-duotone" size="sm"
                                     x-on:click="$dispatch('toggle-show-student-data-modal')"
