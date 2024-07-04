@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use App\Enums\RevisionStatus;
-use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
@@ -19,5 +18,10 @@ class Revision extends Model
     public function lecturer(): BelongsTo
     {
         return $this->belongsTo(Lecturer::class);
+    }
+
+    public function guidance(): BelongsTo
+    {
+        return $this->belongsTo(Guidance::class);
     }
 }
