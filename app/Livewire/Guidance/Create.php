@@ -64,7 +64,7 @@ class Create extends Component
 
         $filename = base64_encode('guidance-' . $this->guidance->id . '-' . $this->guidance->submissions->count() + 1) . ".pdf";
         try {
-            $filepath = $this->file->storePubliclyAs(path: self::PATH, name: $filename);
+            $filepath = $this->file->storePubliclyAs(self::PATH, $filename, 'public');
 
             $submission = $this->guidance->submissions()->create([
                 'title' => $this->title,
