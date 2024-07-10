@@ -22,6 +22,6 @@ class GuidanceType extends Model
 
     public function students(): HasManyThrough
     {
-        return $this->hasManyThrough(Student::class, Guidance::class, 'id', 'id', 'guidance_type_id', 'student_id');
+        return $this->hasManyThrough(Student::class, Guidance::class, 'guidance_type_id', 'id', 'id', 'student_id');
     }
 }
