@@ -18,14 +18,14 @@ class StaffSeeder extends Seeder
         $user = User::create(
             [
                 'password' => bcrypt('password'),
-                'email' => 'situhir@example.com'
+                'email' => 'sikita@example.com'
             ]
         );
 
         $staff = Staff::create([
             'id' => '1234567890',
             'name' => 'Administrator',
-            'phone_number' => '081222778197'
+            'phone_number' => '082272164836'
         ]);
 
         $userType = new UserType(['user_id' => $user->id]);
