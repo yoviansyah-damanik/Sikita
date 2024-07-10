@@ -1,19 +1,19 @@
 <x-content>
     <x-content.title :title="__('Guidance\'s Detail')" :description="__('Please select the type of guidance that will be reviewed.')" />
 
-    <x-student-information :student="$studentData" />
+    <x-student-information :student="$student" />
 
-    @if ($studentData['is_passed']['status'])
+    @if ($student['is_passed']['status'])
         <x-alert type="success">
             {{ __('Congratulation. Your Guidance Student has graduated. You can only see the history of guidance that has been carried out.') }}
         </x-alert>
-        <x-student-passed-information :gradeNumber="$studentData['is_passed']['data']['grade_number']" :grade="$studentData['is_passed']['data']['grade']" />
+        <x-student-passed-information :gradeNumber="$student['is_passed']['data']['grade_number']" :grade="$student['is_passed']['data']['grade']" />
     @endif
 
     <div id="guidance-group" class="flex-1 order-1 space-y-3 sm:space-y-4 sm:order-0">
         <x-form.select block wire:model.live='group' wire:change="$dispatch('clearShowGuidance')" :items="$this->groups" />
 
-        @forelse ($studentData['final_project']['guidances'] as $group)
+        @forelse ($student['final_project']['guidances'] as $group)
             <div class="p-6 bg-white rounded-lg dark:bg-slate-800 sm:p-8">
                 <div class="pb-3 mb-6 border-b-4 sm:mb-8 border-ocean-blue-300 dark:border-ocean-blue-100">
                     <div class="text-lg font-semibold text-ocean-blue-700 dark:text-ocean-blue-300">
@@ -89,7 +89,7 @@
                                         @endforeach
                                     </div>
                                     <x-button color="primary" block base="mt-4" :href="route('lecturer.guidance.review', [
-                                        'student' => $studentData['data']['npm'],
+                                        'student' => $student['data']['npm'],
                                         'guidance' => $type['guidance_id'],
                                     ])">
                                         {{ __('Review') }}

@@ -174,9 +174,13 @@
                             {{ __('Guidance') }}
                         </div>
                         <div class="flex-1">
-                            <x-button color="primary" size="sm" :href="route('lecturer.guidance.detail', ['student' => $student['data']['npm']])">
-                                {{ __('View :view', ['view' => __('Guidance')]) }}
-                            </x-button>
+                            @if (!empty($student['final_project']))
+                                <x-button color="primary" size="sm" :href="route('lecturer.guidance.detail', ['student' => $student['data']['npm']])">
+                                    {{ __('View :view', ['view' => __('Guidance')]) }}
+                                </x-button>
+                            @else
+                                {{ __('No submissions have been approved yet.') }}
+                            @endif
                         </div>
                     </div>
                 @endif
